@@ -5,7 +5,7 @@
 # Return the minimum time to reach the room (n - 1, m - 1).
 # 
 # Two rooms are adjacent if they share a common wall, either horizontally or vertically.
-
+from typing import List
 class Solution:
     def minTimeToReach(self, moveTime: List[List[int]]) -> int:
         n, m = len(moveTime), len(moveTime[0])
@@ -44,4 +44,4 @@ class Solution:
 s = Solution()
 moveTime = [[0,4],[4,4]]
 print("Expected output: 7")
-print("Actual output {s.minTimeToReach(moveTime)}")
+print(f"Actual output {s.minTimeToReach(moveTime)}")
