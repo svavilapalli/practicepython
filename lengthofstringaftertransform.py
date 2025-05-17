@@ -6,7 +6,7 @@
 # 
 # Since the answer may be very large, return it modulo 109 + 7.
 
-
+from typing import List
 class Solution:
     def lengthAfterTransformations(self, s: str, t: int, nums: List[int]) -> int:
         mod = 1_000_000_007
@@ -37,4 +37,4 @@ s = "abcyy"
 t = 2
 nums = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2]
 print("Expected  Output :  7")
-print("Actual Output {SL.lengthAfterTransformations(s, t, nums)}")
+print(f"Actual Output {SL.lengthAfterTransformations(s, t, nums)}")
