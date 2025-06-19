@@ -16,7 +16,23 @@ class Solution:
             ans.append([nums[i], nums[i+1],nums[i+2]])
         return ans
 
+# You are given an integer array nums and an integer k. You may partition nums into one or more subsequences such that each element in nums appears in exactly one of the subsequences.
+# 
+# Return the minimum number of subsequences needed such that the difference between the maximum and minimum values in each subsequence is at most k.
+# 
+# A subsequence is a sequence that can be derived from another sequence by deleting some or no elements without changing the order of the remaining elements.
+    def partitionArray(self, nums: List[int], k: int) -> int:
+        nums.sort()
+        count = 1
+        curmin = nums[0]
+        for c in nums:
+            if c-curmin > k:
+                curmin = c
+                count+=1
+        return count
 
 s.Solution()
 print("Expected Output: [[1,1,3],[3,4,5],[7,8,9]]")
 print("Actual Output: ",s.divideArray([1,3,4,8,7,9,3,5,1], 2))
+print("Expected Output: 2")
+print("Actual Output: ",s.partitionArray([3,6,1,2,5], 2))
